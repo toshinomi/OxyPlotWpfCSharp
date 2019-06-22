@@ -57,7 +57,7 @@ namespace OxyPlotWpfCSharp
             CalHistgram(_bitmap);
 
             var dataList = new List<DataPoint>();
-            for (int nIdx = 0; nIdx < 256; nIdx++)
+            for (int nIdx = 0; nIdx < m_nHistgram.Length; nIdx++)
             {
                 var dataPoint = new DataPoint(nIdx, m_nHistgram[nIdx]);
                 dataList.Add(dataPoint);
@@ -92,7 +92,7 @@ namespace OxyPlotWpfCSharp
 
         public void InitHistgram()
         {
-            for (int nIdx = 0; nIdx < 256; nIdx++)
+            for (int nIdx = 0; nIdx < m_nHistgram.Length; nIdx++)
             {
                 m_nHistgram[nIdx] = 0;
             }
